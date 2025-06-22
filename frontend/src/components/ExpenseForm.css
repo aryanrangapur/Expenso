@@ -1,0 +1,30 @@
+/* src/components/ExpenseForm.css */
+
+.expense-form {
+    /* margin-bottom: 1rem; */
+    /* padding: 1rem; */
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    max-width: 500px;
+  }
+  
+  .expense-input {
+    display: block;
+    width: 300px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .expense-button {
+    padding: 7px 12px 7px 12px;
+    border-radius: 5px;
+    border-color: green;
+    margin-top: 13px;
+  }
+  
+  .expense-error {
+    color: red;
+    margin-bottom: 0.5rem;
+  }
+  

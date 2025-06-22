@@ -1,0 +1,24 @@
+/* Statistics.css */
+
+.stats-container {
+    padding: 1rem;
+  }
+  
+  .stats-year {
+    margin-bottom: 1.5rem;
+  }
+  
+  .stats-list {
+    padding-left: 20px;
+  }
+  
+  .stats-list ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .stats-title {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  

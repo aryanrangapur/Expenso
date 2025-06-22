@@ -1,0 +1,46 @@
+.container {
+  margin-left: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-register,
+.link-login,
+.link-expenses,
+.link-statistics {
+  text-decoration: none;
+  color: green;
+}
+
+.button-logout {
+  padding: 0px 0px;
+  border-radius: 5px;
+  border-color: transparent;
+  color: red;
+  background: transparent;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.username {
+  margin: 0;
+  padding-right: 35px;
+  font-variant-caps: all-petite-caps;
+}
+
+.hi-text {
+  color: black;
+}
+
+.name-text {
+  color: green;
+}
+
+.x{
+  color: green;
+  font-style: italic;
+}
