@@ -51,3 +51,4 @@ expenso/
 
 
 
+![Expenso Architecture](./assets/image.png)
