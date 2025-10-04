@@ -25,7 +25,7 @@ export default function LoginPage() {
     setLoading(true)
 
     try {
-      const response = await axios.api("/auth/token/", {
+      const response = await api.post("/auth/token/", {
         username,
         password,
       })
