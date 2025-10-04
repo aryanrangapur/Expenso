@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: expenso-backend
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "cd backend && gunicorn main.wsgi:application --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com,your-frontend-domain.vercel.app,localhost,127.0.0.1"
