@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import axios from "axios"
+import api from "@/lib/api"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -25,7 +25,7 @@ export default function LoginPage() {
     setLoading(true)
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/auth/token/", {
+      const response = await api.post("/auth/token/", {
         username,
         password,
       })

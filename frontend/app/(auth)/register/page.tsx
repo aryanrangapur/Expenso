@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import axios from "axios"
+import api from "@/lib/api"
 
 export default function RegisterPage() {
   const router = useRouter()
@@ -45,7 +45,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/register/", formData)
+      const response = await api.post("/register/", formData)
       console.log("Registration successful:", response.data)
       router.push("/login")
     } catch (err: any) {
