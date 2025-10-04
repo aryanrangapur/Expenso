@@ -45,7 +45,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const response = await axios.post("/register/", formData)
+      const response = await api.post("/register/", formData)
       console.log("Registration successful:", response.data)
       router.push("/login")
     } catch (err: any) {
