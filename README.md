@@ -17,8 +17,7 @@ A modern, full-stack expense tracking application built with **Next.js 15** and 
 
 ## Live Demo
 
-- **Frontend**: [https://expenso-gray.vercel.app](https://expenso-gray.vercel.app)
-- **Backend API**: [https://expenso-jxyq.onrender.com/api](https://expenso-jxyq.onrender.com/api)
+-  [ [LINK](expenso-six.vercel.app) ]
 
 ## Tech Stack
 
@@ -86,16 +85,11 @@ expenso/
 └── README.md
 ```
 
-##  Contributing
-
-Contributions are welcome! Feel free to submit issues and pull requests.
 
 ##  License
 
 MIT License - feel free to use this project for personal or commercial purposes.
 
----
 
 **Built with  by Aryan Rangapur**
 
-*Start tracking your expenses smarter today!* 🚀
