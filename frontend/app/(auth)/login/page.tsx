@@ -19,26 +19,31 @@ export default function LoginPage() {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
-    setLoading(true)
+// In your login page
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setError("")
+  setLoading(true)
 
-    try {
-      const response = await api.post("/auth/token/", {
-        username,
-        password,
-      })
-
-      localStorage.setItem("token", response.data.token)
-      localStorage.setItem("username", username)
-      router.push("/dashboard")
-    } catch (err: any) {
-      setError(err.response?.data?.non_field_errors?.[0] || "Invalid credentials")
-    } finally {
-      setLoading(false)
-    }
+  try {
+    console.log("Attempting login with:", { username })
+    const response = await api.post("/auth/token/", {
+      username,
+      password,
+    })
+    console.log("Login response:", response.data)
+    
+    localStorage.setItem("token", response.data.token)
+    localStorage.setItem("username", username)
+    router.push("/dashboard")
+  } catch (err: any) {
+    console.error("Login error details:", err)
+    console.error("Login error response:", err.response?.data)
+    setError(err.response?.data?.non_field_errors?.[0] || "Invalid credentials")
+  } finally {
+    setLoading(false)
   }
+}
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">

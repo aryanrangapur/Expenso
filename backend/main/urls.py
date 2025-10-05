@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('expenses.urls')),  # All expenses URLs are under /api/
+    path('api/', include('expenses.urls')),  # This is correct
 ]

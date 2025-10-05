@@ -10,11 +10,10 @@ router = DefaultRouter()
 router.register('expenses', ExpenseViewSet, basename='expense')
 
 urlpatterns = [
-    # Remove the 'api/' prefix - it's already in main/urls.py
-    path('auth/token/', obtain_auth_token, name='api_token_auth'),  # Now: /api/auth/token/
-    path('register/', generics.CreateAPIView.as_view(               # Now: /api/register/
+    path('auth/token/', obtain_auth_token, name='api_token_auth'),
+    path('register/', generics.CreateAPIView.as_view(
         serializer_class=UserSerializer
     ), name='register'),
 ]
 
-urlpatterns += router.urls  # This creates /api/expenses/
+urlpatterns += router.urls
