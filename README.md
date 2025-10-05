@@ -1,10 +1,14 @@
 # Expenso - Smart Expense Tracker
 
-A modern, full-stack expense tracking application built with **Next.js 15** and **Django REST Framework**.
+Expenso is a full-stack web application designed to help users track and manage their personal expenses efficiently. Built with modern technologies, it provides a seamless experience for monitoring spending habits, categorizing expenses, and gaining financial insights.
 
 ![Expenso Dashboard](https://img.shields.io/badge/Expenso-Smart%20Expense%20Tracker-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![Django](https://img.shields.io/badge/Django-REST%20Framework-green)
+
+# Why Expenso?
+
+Expenso stands out by combining a robust backend with a beautiful, user-friendly frontend. It's designed for both technical excellence and practical utility, making expense tracking simple and effective for everyday users while maintaining a codebase that's clean and maintainable for developers.
 
 ## Features
 
@@ -80,11 +84,23 @@ This project is deployed using:
 
 ```
 expenso/
-├── frontend/          # Next.js 15 application
-├── backend/           # Django REST API
-└── README.md
+├── frontend/                 # Next.js application
+│   ├── app/
+│   │   ├── login/           # Authentication pages
+│   │   ├── register/
+│   │   └── dashboard/       # Main application
+│   ├── components/          # Reusable UI components
+│   └── lib/
+│       └── api.ts          # API configuration
+│
+└── backend/                 # Django application
+    ├── main/               # Project settings
+    └── expenses/           # Core app
+        ├── models.py       # Data models
+        ├── views.py        # API views
+        ├── serializers.py  # Data serialization
+        └── urls.py         # API routes
 ```
-
 
 ##  License
 
