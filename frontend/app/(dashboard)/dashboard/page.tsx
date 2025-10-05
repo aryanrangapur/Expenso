@@ -125,7 +125,7 @@ export default function DashboardPage() {
         <div>
           <h1 className="text-3xl font-bold">Dashboard</h1>
           <p className="text-muted-foreground">
-            "Overview of your expenses"
+            Overview of your expenses
           </p>
         </div>
         
