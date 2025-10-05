@@ -17,7 +17,7 @@ A modern, full-stack expense tracking application built with **Next.js 15** and 
 
 ## Live Demo
 
--  [ [LINK](expenso-six.vercel.app) ]
+-  [ [LINK](https://expenso-six.vercel.app/) ]
 
 ## Tech Stack
 
