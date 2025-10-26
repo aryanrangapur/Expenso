@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseURL: "https://expenso-jxyq.onrender.com/api/",
+  baseURL: "https://expenso-4czh.onrender.com/api/",
 })
 
 api.interceptors.request.use((config) => {
