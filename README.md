@@ -2,9 +2,6 @@
 
 Expenso is a full-stack web application designed to help users track and manage their personal expenses efficiently. Built with modern technologies, it provides a seamless experience for monitoring spending habits, categorizing expenses, and gaining financial insights.
 
-![Expenso Dashboard](https://img.shields.io/badge/Expenso-Smart%20Expense%20Tracker-blue)
-![Next.js](https://img.shields.io/badge/Next.js-15-black)
-![Django](https://img.shields.io/badge/Django-REST%20Framework-green)
 
 # Why Expenso?
 
