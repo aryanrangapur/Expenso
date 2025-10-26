@@ -12,17 +12,19 @@ jobs:
     steps:
       - name: Ping API Root
         run: |
-          echo "🔄 Pinging API root endpoint..."
-          response_code=$(curl -s -o /dev/null -w "%{http_code}" https://expenso-jxyq.onrender.com/api/)
+          echo "Pinging API root endpoint..."
+          response_code=$(curl -s -o /dev/null -w "%{http_code}" https://expenso-4czh.onrender.com/api/)
+
+
           echo "API Root Response: $response_code"
           
       - name: Ping Expenses Endpoint
         run: |
-          echo "🔄 Pinging expenses endpoint..."
-          response_code=$(curl -s -o /dev/null -w "%{http_code}" https://expenso-jxyq.onrender.com/api/expenses/)
+          echo "Pinging expenses endpoint..."
+          response_code=$(curl -s -o /dev/null -w "%{http_code}" https://expenso-4czh.onrender.com/api/expenses/)
           echo "Expenses Response: $response_code"
           
       - name: Log Success
         run: |
-          echo "✅ Backend kept alive at $(date -u)"
-          echo "🌐 Backend URL: https://expenso-jxyq.onrender.com"
+          echo "Backend kept alive at $(date -u)"
+          echo "Backend URL: https://expenso-4czh.onrender.com"
