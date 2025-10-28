@@ -1,10 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 import "./globals.css"
 import { Inter, DM_Sans as V0_Font_DM_Sans, Space_Mono as V0_Font_Space_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { ClerkProvider } from "@clerk/nextjs"
 
 // Initialize fonts
 const _dmSans = V0_Font_DM_Sans({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900","1000"] })
@@ -27,13 +27,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>
-          {children}
-          <Analytics />
-        </Suspense>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="dark">
+        <body className={`${inter.variable} font-sans antialiased`}>
+          <Suspense fallback={<div>Loading...</div>}>
+            {children}
+            <Analytics />
+          </Suspense>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

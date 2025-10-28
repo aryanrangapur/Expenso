@@ -1,10 +1,10 @@
 "use client"
 
-import { SignIn, SignedIn, SignedOut } from "@clerk/nextjs"
+import { SignUp, SignedIn, SignedOut } from "@clerk/nextjs"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 
-export default function Home() {
+export default function SignUpPage() {
   const router = useRouter()
 
   return (
@@ -21,12 +21,12 @@ export default function Home() {
                 </div>
                 <h1 className="text-2xl font-bold text-foreground">Expenso</h1>
               </div>
-              <p className="text-muted-foreground">Smart Expense Tracker</p>
+              <p className="text-muted-foreground">Create your account</p>
             </div>
             <div className="bg-card rounded-xl border border-border p-6 shadow-lg">
-              <SignIn 
+              <SignUp 
                 routing="hash"
-                signUpUrl="/sign-up"
+                signInUrl="/"
                 appearance={{
                   elements: {
                     rootBox: "mx-auto",
