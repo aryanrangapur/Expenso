@@ -28,5 +28,3 @@ jobs:
         run: |
           echo "Backend kept alive at $(date -u)"
           echo "Backend URL: https://expenso-4czh.onrender.com"
-
-is thsi code crt?
