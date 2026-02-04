@@ -2,29 +2,23 @@ name: Keep Render Backend Alive
 
 on:
   schedule:
-    # Runs every 5 minutes
     - cron: '*/5 * * * *'
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
 
 jobs:
   ping-backend:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping API Root
+      - name: Ping Render Backend
         run: |
-          echo "Pinging API root endpoint..."
-          response_code=$(curl -s -o /dev/null -w "%{http_code}" https://expenso-4czh.onrender.com/api/)
+          set -e
 
+          echo "Pinging API root..."
+          curl -f -s https://expenso-4czh.onrender.com/api/ > /dev/null
+          echo "✅ API root OK"
 
-          echo "API Root Response: $response_code"
-          
-      - name: Ping Expenses Endpoint
-        run: |
           echo "Pinging expenses endpoint..."
-          response_code=$(curl -s -o /dev/null -w "%{http_code}" https://expenso-4czh.onrender.com/api/expenses/)
-          echo "Expenses Response: $response_code"
-          
-      - name: Log Success
-        run: |
+          curl -f -s https://expenso-4czh.onrender.com/api/expenses/ > /dev/null
+          echo "✅ Expenses endpoint OK"
+
           echo "Backend kept alive at $(date -u)"
-          echo "Backend URL: https://expenso-4czh.onrender.com"
